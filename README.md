@@ -1,75 +1,67 @@
-# React + TypeScript + Vite
+# Dama & HP - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page comercial para o projeto **Dama & HP**, um tabuleiro de damas tecnológico inspirado no universo de Harry Potter, com prévia jogável do jogo.
 
-Currently, two official plugins are available:
+## 🧙‍♂️ Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Stack:** React 19 + TypeScript + TailwindCSS 4 + Vite 8
+- **Animações:** Framer Motion
+- **Roteamento:** React Router DOM
+- **Ícones:** Lucide React
 
-## React Compiler
+## 🎮 Funcionalidades
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Landing Page
+- Design "Modern Wizard" com paleta de cores sombrias e douradas
+- Hero com vídeo de background
+- Seções: Sobre, Modelos de Tabuleiros, Diferenciais, Contato
+- Navbar fixa com botão para prévia do jogo
+- Partículas flutuantes no background
 
-Note: This will impact Vite dev & build performances.
+### Prévia do Jogo (`/game`)
+- Tabuleiro 8x10 interativo
+- 2 jogadores (hotseat) na mesma tela
+- Movimentação e captura de peças
+- Promoção a Arquimago (chegar na última fileira)
+- 3 temas visuais: Arena do Dragão, Lago Negro, Labirinto
+- Imagens de fundo temáticas
 
-## Expanding the ESLint configuration
+## 🚀 Como Executar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
+# Instalar dependências
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Iniciar desenvolvimento
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build para produção
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Estrutura
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── game/        # Componentes do jogo (Board, Piece, Square, GameInfo)
+│   ├── layout/     # Navbar, GameLayout
+│   ├── sections/   # Seções da landing (Hero, About, Models, Features, Contact)
+│   └── ui/         # Componentes reutilizáveis (Button, ParticleBackground)
+├── hooks/          # useGame - lógica do jogo
+├── lib/            # theme.ts, animations.ts, gameLogic.ts
+└── pages/          # Landing.tsx, GamePreview.tsx
+```
+
+## 🎨 Paleta de Cores
+
+| Elemento | Cor |
+|----------|-----|
+| Fundo | `#1A1A1A` (Deep Charcoal) |
+| Títulos/CTAs | `#D4A017` (Antique Gold) |
+| Texto | `#F0E6D2` (Ivory Parchment) |
+| Bordas | `#C69C6D` (Golden Tan) |
+
+## 📄 Licença
+
+MIT License - See LICENSE file for details.
