@@ -22,7 +22,7 @@ export function GameLayout({ children }: GameLayoutProps) {
             className="flex items-center gap-2 text-[#F0E6D2] hover:text-[#D4A017] transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span className="font-heading tracking-wider">Voltar</span>
+            <span className="font-heading tracking-wider hidden md:inline">Voltar</span>
           </Link>
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-[#D4A017]" />

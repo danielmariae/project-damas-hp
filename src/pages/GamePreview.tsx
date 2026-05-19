@@ -16,6 +16,7 @@ const themes = {
     darkSquare: '#2D1810',
     border: '#8B4513',
     glow: 'rgba(139, 69, 19, 0.4)',
+    backgroundImage: '/assets/images/34.png',
   },
   lake: {
     name: 'O Lago Negro',
@@ -24,14 +25,16 @@ const themes = {
     darkSquare: '#1a2a3a',
     border: '#4682B4',
     glow: 'rgba(70, 130, 180, 0.4)',
+    backgroundImage: '/assets/images/35.png',
   },
   labyrinth: {
     name: 'O Labirinto',
     icon: <Network className="w-4 h-4" />,
-    lightSquare: '#6B5B95',
-    darkSquare: '#2D2438',
-    border: '#6B5B95',
+    lightSquare: '#6c955b',
+    darkSquare: '#263b1e',
+    border: '#6c955b',
     glow: 'rgba(107, 91, 149, 0.4)',
+    backgroundImage: '/assets/images/36.png',
   },
 };
 

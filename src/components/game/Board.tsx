@@ -6,6 +6,7 @@ interface BoardTheme {
   darkSquare: string;
   border: string;
   glow: string;
+  backgroundImage?: string;
 }
 
 interface BoardProps {
@@ -66,7 +67,14 @@ export function Board({
     overflow: 'hidden',
     boxShadow: `0 0 30px ${theme.glow}`,
     margin: '0 auto',
+    backgroundImage: theme.backgroundImage ? `url(${theme.backgroundImage})` : 'none',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    position: 'relative',
+    minHeight: '400px',
   };
+
+ // console.log('Background image:', theme.backgroundImage);
 
   return (
     <div style={boardStyle}>

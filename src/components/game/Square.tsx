@@ -7,6 +7,7 @@ interface BoardTheme {
   darkSquare: string;
   border: string;
   glow: string;
+  backgroundImage?: string;
 }
 
 interface SquareProps {
@@ -28,12 +29,17 @@ export function Square({
   onClick,
   theme,
 }: SquareProps) {
-  const bgColor = isDark ? theme.darkSquare : theme.lightSquare;
+  const bgColor = isDark 
+    ? `${theme.darkSquare}CC` 
+    : `${theme.lightSquare}80`;
 
   return (
     <div
       className="relative w-full aspect-square cursor-pointer"
-      style={{ backgroundColor: bgColor }}
+      style={{ 
+        backgroundColor: bgColor,
+        backdropFilter: 'blur(0.5px)',
+      }}
       onClick={onClick}
     >
       {isValidMove && (
