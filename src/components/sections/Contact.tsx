@@ -180,7 +180,7 @@ export const Contact = () => {
           transition={{ delay: 0.4 }}
         >
           <p className="text-text-muted text-sm">
-            © 2024 Dama & HP. Feito com 🧙‍♂️ e ⚡ por apaixonados pelo universo bruxo.
+            © 2026 Dama & HP. Feito com 🧙‍♂️ e ⚡ por apaixonados pelo universo bruxo.
           </p>
         </motion.div>
       </div>

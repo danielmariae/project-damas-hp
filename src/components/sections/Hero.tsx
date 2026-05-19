@@ -57,7 +57,9 @@ export const Hero = () => {
         >
           <Button size="lg">
             <Sparkles className="inline-block w-5 h-5 mr-2" />
-            Explorar os Tabuleiros
+            <a href="#models">
+              Explorar os Tabuleiros
+            </a>  
           </Button>
         </motion.div>
       </motion.div>

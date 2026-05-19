@@ -95,6 +95,14 @@ export const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <Link
+                to="/game"
+                className="flex items-center gap-2 px-4 py-3 rounded-lg bg-accent/20 text-accent border border-accent/30 text-lg font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Gamepad2 className="w-5 h-5" />
+                Jogar
+              </Link>
             </div>
           </motion.div>
         )}

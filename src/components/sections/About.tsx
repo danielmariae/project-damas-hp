@@ -25,7 +25,7 @@ export const About = () => {
     <section id="about" className="py-24 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          className="grid lg:grid-cols-2 gap-12 items-center"
+          className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
@@ -35,13 +35,13 @@ export const About = () => {
             className="relative"
             variants={fadeInLeft}
           >
-            <div className="relative aspect-square max-w-md mx-auto">
+            <div className="relative aspect-square max-w-md mx-auto w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-purple-500/20 rounded-2xl" />
-              <div className="relative inset-4 bg-dark-light rounded-xl border border-surface/50 overflow-hidden">
+              <div className="relative inset-4 bg-dark-light rounded-xl border border-surface/50 overflow-hidden h-full w-full">
                 <img
                   src="/assets/images/magic-forge.jpeg"
                   alt="The Magic Forge"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full max-w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">

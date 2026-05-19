@@ -57,28 +57,29 @@ export function GamePreview() {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-<div className="flex items-center justify-center gap-4 mb-6">
-          {(Object.keys(themes) as BoardTheme[]).map((t) => (
-            <button
-              key={t}
-              onClick={() => setTheme(t)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all ${
-                theme === t
-                  ? 'bg-[#D4A017] text-[#1A1A1A]'
-                  : 'bg-[#1A1A1A] text-[#C69C6D] border border-[#C69C6D]/30 hover:border-[#D4A017]'
-              }`}
-            >
-              {themes[t].icon}
-              {themes[t].name}
-            </button>
-          ))}
-        </div>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              {(Object.keys(themes) as BoardTheme[]).map((t) => (
+                <button
+                  key={t}
+                  onClick={() => setTheme(t)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all ${
+                    theme === t
+                      ? 'bg-[#D4A017] text-[#1A1A1A]'
+                      : 'bg-[#1A1A1A] text-[#C69C6D] border border-[#C69C6D]/30 hover:border-[#D4A017]'
+                  }`}
+                >
+                  {themes[t].icon}
+                  {themes[t].name}
+                </button>
+              ))}
+            </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2 }}
-        >
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+            >
             <Board
               pieces={game.pieces}
               selectedPosition={game.selectedPosition}
@@ -92,7 +93,8 @@ export function GamePreview() {
               cols={game.COLS}
               theme={currentTheme}
             />
-          </motion.div>
+            </motion.div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
